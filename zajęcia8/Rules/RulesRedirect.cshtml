@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        @{ 
+            var listaZasad = (List<string>)Session["Rules"];
+            if (listaZasad == null)
+            {
+                listaZasad = new List<string>();
+            }
+
+            if (IsPost)
+            {
+                listaZasad.Add(Request.Form["nowaZasada"]);
+                Session["Rules"] = listaZasad;
+            }
+            Response.Redirect("RulesGet.cshtml");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

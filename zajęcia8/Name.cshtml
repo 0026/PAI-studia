@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        @{
+            string name = "Robert Paulson";
+
+            if (IsPost) {
+                if(String.IsNullOrEmpty(Request.Form["name"])){
+                    name = Request.Form["name"];
+                }
+            }
+         }
+    </script>
+</head>
+<body>
+    @for (var i = 0; i < 10; i++)
+        {<p>His name is @name</p>}
+</body>
+</html>

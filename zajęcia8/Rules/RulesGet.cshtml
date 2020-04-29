@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        @{
+            var listaZasad = (List<string>)Session["Rules"];
+            if (listaZasad == null){
+                listaZasad = new List<string>();
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="/Rules/RulesPost">Dodaj zasade.</a>
+    <p>Lista zasad:</p>
+    @for (var i = 0; i < listaZasad.Count(); i++)
+    {<p>@i . @listaZasad[i]</p>}
+</body>
+</html>
