@@ -1,0 +1,19 @@
+body {
+    background-color: whitesmoke;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.notDisplay{
+    display: none;
+}
+
+.niceDiv{
+  border: 5px outset rgb(255, 156, 64);
+  background-color: lightblue;    
+  width: 50%;
+  padding: 0.5%;
+}
+
